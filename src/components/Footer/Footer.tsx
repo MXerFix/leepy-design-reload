@@ -10,22 +10,22 @@ const Footer = () => {
   return (
     <div className={classNames('footer-wrapper font-comfortaa')}>
       <div className='footer-box'>
-        <div className='footer-column-box'>
+        <div id='footer-nav-docs' className='footer-column-box'>
           <a className='footer_btn' href="">Политика конфиденциальности</a>
           <a className='footer_btn' href="">Условия использования</a>
           <span className={classNames('font-poiret')}>©2023</span>
-          <Logotype className='scale-[0.6]' />
+          <Logotype className='scale-[0.6] max-sm:w-4 max-sm:h-7 max-sm:scale-100' />
         </div>
-        <div className='footer-column-box'>
+        <div id='footer-nav-main' className='footer-column-box'>
           <a className='footer_btn' href="">услуги</a>
           <a className='footer_btn' href="">на главную</a>
           <a className='footer_btn' href="">кейсы</a>
         </div>
-        <div className='footer-column-box'>
-          <h5>Контакты:</h5>
+        <div id='footer-nav-contacts' className='footer-column-box'>
+          <h5 className='max-sm:hidden'>Контакты:</h5>
           <div className='footer-btn-div'>
             <a className='footer_btn' href="">
-              <ContactsTelegram />
+              <ContactsTelegram width={16} height={16} />
               telegram
             </a>
           </div>
@@ -39,6 +39,11 @@ const Footer = () => {
             <a className='footer_btn' href="">
               <ContactsEmail />
               email
+            </a>
+          </div>
+          <div className='footer-btn-div'>
+            <a className='footer_btn text-xs' href="">
+              8 (995) 898 98 82
             </a>
           </div>
         </div>

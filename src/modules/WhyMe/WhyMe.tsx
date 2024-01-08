@@ -9,24 +9,34 @@ const WhyMe = () => {
       <h2 className=' section-title '>
         Почему именно я?
       </h2>
-      <div className='flex flex-col items-center justify-start'>
-        <div className='w-11/12 relative flex flex-row flex-wrap text-[var(--foreground)]'>
-          
+      <div className='about-box'>
+        <div className='about-inbox relative'>
           {whyMeData.map((item) => (
-            <div className='w-[43.5%] mx-[3.25%] my-3 flex flex-row items-start justify-between gap-6 ' key={item.title}>
+            <div className=' about-item ' key={item.title}>
               <div className=''>
-                <item.icon />
+                <item.icon width={'var(--lord-icon-size)'} height={'var(--lord-icon-size)'} />
               </div>
               <div>
-                <h4 className={classNames(caveat.className, 'text-4xl leading-[var(--lord-icon-size)]')}>
+                <h4 className={classNames(caveat.className, 'about-item-title')}>
                   {item.title}
                 </h4>
-                <p className={classNames(montserrat.className, '')}>
+                <p className={classNames(montserrat.className, 'about-item-description')}>
                   {item.description}
                 </p>
               </div>
             </div>
           ))}
+          <div className='absolute w-1.5 h-full top-0 -left-3.5'>
+            <svg className='w-max h-full' xmlns="http://www.w3.org/2000/svg" width="" height="" viewBox="0 0 6 491" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66667 490.333C4.13943 490.333 5.33333 489.139 5.33333 487.667C5.33333 486.365 4.40043 485.281 3.16667 485.047L3.16667 328.397C4.40043 328.163 5.33333 327.079 5.33333 325.777C5.33333 324.475 4.40043 323.391 3.16667 323.157L3.16667 148.519C4.40044 148.285 5.33334 147.201 5.33334 145.899C5.33334 144.597 4.40044 143.513 3.16668 143.279L3.16669 5.28656C4.40045 5.05252 5.33335 3.96854 5.33335 2.66666C5.33335 1.19391 4.13945 0 2.66669 0C1.19393 0 1.92864e-05 1.19391 1.9228e-05 2.66666C1.91763e-05 3.96854 0.932922 5.05252 2.16669 5.28656L2.16668 143.279C0.932914 143.513 7.18291e-06 144.597 7.13131e-06 145.899C7.07968e-06 147.201 0.93291 148.285 2.16667 148.519L2.16667 323.157C0.932903 323.391 5.16011e-08 324.475 0 325.777C-5.16011e-08 327.079 0.932906 328.163 2.16667 328.397L2.16667 485.047C0.932903 485.281 5.16011e-08 486.365 0 487.667C-5.83823e-08 489.139 1.19391 490.333 2.66667 490.333Z" fill="url(#paint0_linear_783_780)" />
+              <defs>
+                <linearGradient id="paint0_linear_783_780" x1="2.66651" y1="0.32959" x2="2.66651" y2="490.333" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#9B71B4" />
+                  <stop offset="1" stop-color="white" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
         </div>
       </div>
     </div>

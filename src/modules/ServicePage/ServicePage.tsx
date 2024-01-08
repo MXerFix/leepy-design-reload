@@ -48,7 +48,7 @@ const ServicePage = ({ details }: ServicePageType) => {
       }}
     >
       <div className='service-page-main'>
-        <Image quality={100} src={img} alt={name} />
+        <Image className='service-page-image' quality={100} src={img} alt={name} />
         <div className='service-page-text'>
           <div className=''>
             <h3 className={`service-page-title mb-4`} > {name} </h3>
@@ -62,7 +62,7 @@ const ServicePage = ({ details }: ServicePageType) => {
                 <ArrowServicePageDetails />
               </span>
             </button>
-            <div className=' flex flex-row items-center justify-end gap-12 '>
+            <div className=' flex flex-row items-center justify-end gap-12 max-sm:gap-0 max-sm:justify-between max-sm:w-full '>
               <p className='service-page-price'> {price} </p>
               <button className='service-page-take-service-btn'> Заказать проект </button>
             </div>
@@ -73,11 +73,11 @@ const ServicePage = ({ details }: ServicePageType) => {
         </button>
       </div>
       <div id={`${id}-addition`} data-state="closed" className='service-page-addition'>
-        <h5 className='service-page-title mb-16' > Этапы проекта </h5>
-        <div className='flex flex-row items-center justify-between'>
+        <h5 className='service-page-title mb-16 max-sm:mb-10' > Этапы проекта </h5>
+        <div className='flex flex-row items-center justify-between max-sm:flex-col'>
           <ul className='service-page-addition-steps-ul mb-16'>
             {steps.map((step, idx) =>
-              <li className='service-page-addition-step-li'>
+              <li key={step} className='service-page-addition-step-li'>
                 <p className={'w-6 flex flex-row items-center justify-between'}>
                   <span className={idx === 0 ? 'ml-1.5' : ''}>{idx + 1}</span>
                   <span>.</span>
@@ -90,7 +90,7 @@ const ServicePage = ({ details }: ServicePageType) => {
             <a className='' href="">Скачайте бриф</a>, заполните и отправьте его мне!
           </p>
         </div>
-        <p className='mb-24 text-2xl'> * После каждого выполненного пункта клиент получает отчет. </p>
+        <p className='mb-24 text-2xl max-sm:text-lg max-sm:my-10'> * После каждого выполненного пункта клиент получает отчет. </p>
         <Footer />
       </div>
     </div>

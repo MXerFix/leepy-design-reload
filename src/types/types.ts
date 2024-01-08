@@ -13,6 +13,7 @@ export type servicesDataType = {
   img: string
   href: string
   label: string
+  color: string
 }
 
 export type otherServicesDataType = {
@@ -34,6 +35,7 @@ export type projectStatusType = 'available' | 'sold' | 'reserved' | 'wip'
 
 export type projectsItemType = {
   name: string
+  type: string
   href: string
   status: projectStatusType
   img: StaticImageData

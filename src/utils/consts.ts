@@ -69,25 +69,29 @@ export const servicesData: servicesDataType[] = [
     id: 'shop_details',
     href: '/services/shop',
     label: 'Интернет-магазин',
-    img: service_shop
+    img: service_shop,
+    color: 'var(--service-card-bg-store)'
   },
   {
     id: 'business_details',
     href: '/services/business',
     label: 'Сайт-визитка',
-    img: service_business
+    img: service_business,
+    color: 'var(--service-card-bg-business)'
   },
   {
     id: 'landing_details',
     href: '/services/landing',
     label: 'Landing-page',
-    img: service_landing
+    img: service_landing,
+    color: 'var(--service-card-bg-landing)'
   },
   {
     id: 'multipage_details',
     href: '/services/multipage',
     label: 'Многостраничный сайт',
-    img: service_multipage
+    img: service_multipage,
+    color: 'var(--service-card-bg-multipage)'
   },
 ]
 
@@ -131,24 +135,28 @@ export const validProjectStatuses: validProjectStatusesType = {
 export const projectsItems: projectsItemType[] = [
   {
     name: 'Дизайн-проект для цветочного бутика',
+    type: 'Интернет-магазин',
     href: '',
     status: 'available',
     img: flowers
   },
   {
     name: 'Дизайн-проект для магазина техники',
+    type: 'Интернет-магазин',
     href: '',
     status: 'sold',
     img: syncsound
   },
   {
     name: 'Дизайн-проект для туров в Грузию',
+    type: 'Многостраничный сайт',
     href: '',
     status: 'reserved',
     img: gamarjoba
   },
   {
     name: 'Дизайн-проект для пекарни',
+    type: 'Лендинг',
     href: '',
     status: 'wip',
     img: bakery

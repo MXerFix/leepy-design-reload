@@ -87,49 +87,68 @@ const Services = () => {
   }
 
   return (
-    <div id='services' className='services-wrapper'>
+    <>
       <h2 className='section-title'>
         Какие дизайн-проекты создаю?
       </h2>
-      <div className='services-outbox relative'>
-        <span className='services-center-line-span '>
-        </span>
-        <span className='services-center-line-circle'>
-        </span>
-        <div className='services-box relative'>
-          {servicesData.map((service, idx) => (
-            <div
-              id={`services-item-${idx + 1}`}
-              style={{
-                borderRadius: ` ${idx === 3 ? '0px' : '90px'} ${idx === 2 ? '0px' : '90px'} ${idx === 0 ? '0px' : '90px'} ${idx === 1 ? '0px' : '90px'} `,
-                flexDirection: (idx > 1 ? 'column-reverse' : 'column'),
-                background: `linear-gradient(${idx > 1 ? "180deg" : '0deg'}, ${backgroundHandle(idx)} 0%, rgba(0, 0, 0, 0.00) 91.55%)`
-              }}
-              className='services-item'
-              onClick={e => detailHandle(service.id)}
-              key={service.label}
-            >
-              <Image src={service.img} alt={service.label} />
+      <div id='services' className='services-wrapper max-sm:hidden'>
+        <div className='services-outbox relative'>
+          <span className='services-center-line-span '>
+          </span>
+          <span className='services-center-line-circle'>
+          </span>
+          <div className='services-box relative'>
+            {servicesData.map((service, idx) => (
               <div
+                id={`services-item-${idx + 1}`}
                 style={{
-                  top: idx > 1 ? '3rem' : '',
-                  left: '2.75rem',
-                  bottom: idx <= 1 ? '3rem' : '',
+                  borderRadius: ` ${idx === 3 ? '0px' : '90px'} ${idx === 2 ? '0px' : '90px'} ${idx === 0 ? '0px' : '90px'} ${idx === 1 ? '0px' : '90px'} `,
+                  flexDirection: (idx > 1 ? 'column-reverse' : 'column'),
+                  background: `linear-gradient(${idx > 1 ? "180deg" : '0deg'}, ${backgroundHandle(idx)} 0%, rgba(0, 0, 0, 0.00) 91.55%)`
                 }}
-                className='service-item-text-block'
+                className='services-item'
+                onClick={e => detailHandle(service.id)}
+                key={service.label}
               >
-                <button className='mb-4'>
-                  <ArrowBtn_1 />
-                </button>
-                <p className={'text-[var(--foreground)] text-[2rem] max-w-72 '}>
-                  {service.label}
-                </p>
+                <Image src={service.img} alt={service.label} />
+                <div
+                  style={{
+                    top: idx > 1 ? '3rem' : '',
+                    left: '2.75rem',
+                    bottom: idx <= 1 ? '3rem' : '',
+                  }}
+                  className='service-item-text-block'
+                >
+                  <button className='mb-4'>
+                    <ArrowBtn_1 />
+                  </button>
+                  <p className={'text-[var(--foreground)] text-[2rem] max-w-72 '}>
+                    {service.label}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+      <div id='m-services' className='relative hidden max-sm:flex flex-col items-end justify-start gap-4'>
+        {servicesData.map((service, idx) => (
+          <div
+            key={service.id}
+            className={` relative -right-4 w-11/12 rounded-l-2xl h-40 p-10 `}
+            onClick={e => detailHandle(service.id)}
+            style={{
+              backgroundColor: service.color
+            }}
+          >
+            <h5 className='text-2xl text-white mb-4'> {service.label} </h5>
+            <button className='mb-4'>
+              <ArrowBtn_1 />
+            </button>
+          </div>
+        ))}
+      </div>
+    </>
   )
 }
 

@@ -29,11 +29,14 @@
   --header-mb: 6rem;
   --banner: calc(100vh - var(--header) - var(--header-mb));
   --lord-icon-size: 70px;
+  --footer-icons-size: 24px;
 }
 
 @media (max-width: 719px) {
   :root {
-    --lord-icon-size: 35px;
+    --banner: 100dvh;
+    --lord-icon-size: 40px;
+    --footer-icons-size: 10px;
   }
 }
 
@@ -56,6 +59,10 @@ body {
   background: var(--background);
   max-width: 1920px;
   margin: auto;
+}
+
+main {
+  @apply min-h-screen px-20;
 }
 
 #modal_root[data-state="closed"] {
@@ -419,7 +426,7 @@ body {
 
 .banner-image {
   animation: banner-content-author 1500ms ease-in-out normal,
-  banner_image 5s infinite ease-in-out;
+    banner_image 5s infinite ease-in-out;
 }
 
 @keyframes banner_image {
@@ -441,7 +448,6 @@ body {
   color: var(--elements);
 }
 
-
 .banner-content-span {
   display: block;
   border-radius: 1rem;
@@ -454,10 +460,10 @@ body {
 }
 @keyframes banner-content-span {
   from {
-    transform: scaleX(0) ;
+    transform: scaleX(0);
   }
   to {
-    transform: scaleX(100%) ;
+    transform: scaleX(100%);
   }
 }
 
@@ -469,13 +475,17 @@ body {
   overflow: hidden;
   white-space: nowrap;
   animation: typing_slogan 3.5s steps(41, end) 3.5s,
-    banner-element-opacity 3.5s normal,
-    blink-caret .75s step-end infinite;
+    banner-element-opacity 3.5s normal, blink-caret 0.75s step-end infinite;
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: white; }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
 }
 
 @keyframes typing_slogan {
@@ -614,6 +624,24 @@ body {
     opacity: 1;
     transform: none;
   }
+}
+
+/* ABOUT STYLES */
+
+.about-box {
+  @apply flex flex-col items-center justify-start;
+}
+
+.about-inbox {
+  @apply w-11/12 relative flex flex-row flex-wrap text-[var(--foreground)];
+}
+
+.about-item {
+  @apply w-[43.5%] mx-[3.25%] my-3 flex flex-row items-start justify-between gap-6;
+}
+
+.about-item-title {
+  @apply text-4xl leading-[var(--lord-icon-size)];
 }
 
 /* SERVICES STYLES */
@@ -833,6 +861,10 @@ body {
   @apply w-full h-full;
 }
 
+.projects-background-svg {
+  @apply absolute top-[122px] right-[128px] pointer-events-none;
+}
+
 .go_project_btn_circle {
   padding: 48px;
   position: relative;
@@ -864,11 +896,88 @@ body {
   transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.go_project_btn_circle:hover::after {
-  transform: translateX(350%);
+.go-project-btn-BLACK {
+  animation: toggling_light 7.5s 3.5s linear normal,
+  banner-element-opacity 3.5s;
 }
 
+@keyframes toggling_light {
+  0% {
+    opacity: 0;
+  }
+
+  28% {
+    opacity: 0;
+  }
+
+  29% {
+    opacity: 0.6;
+  }
+
+  34% {
+    opacity: 0.6;
+  }
+  35% {
+    opacity: 0;
+  }
+  39% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0.8;
+  }
+  44% {
+    opacity: 0.8;
+  }
+
+  45% {
+    opacity: 0;
+  }
+  46% {
+    opacity: 0.6;
+  }
+
+  47% {
+    opacity: 0;
+  }
+
+  48% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.go-project-btn-BLACK::before {
+  box-shadow: 0px 6px 6px 0px rgba(255, 255, 255, 0.3) inset;
+  filter: drop-shadow(0px 6px 6px rgba(255, 255, 255, 0.3));
+  transform-origin: center;
+  transform: translateX(0);
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* .go-project-btn-BLACK:hover::after {
+  transform: translateX(350%);
+} */
+
+/* .go_project_btn_circle:hover::after {
+  transform: translateX(350%);
+} */
+
 .go_project_btn_circle:hover::before {
+  background-color: #fff;
+  width: 100%;
+  transform: translateX(0);
+}
+
+.go-project-btn-BLACK:hover::before {
   background-color: #fff;
   width: 100%;
   transform: translateX(0);
@@ -906,4 +1015,231 @@ body {
   position: absolute;
   top: 157px;
   right: 428px;
+}
+
+.mobile-foot-bar {
+  @apply hidden;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 719px) {
+  main {
+    @apply px-[5vw];
+  }
+
+  .section-title {
+    @apply text-[2rem] leading-9 ml-4 my-20;
+  }
+
+  .banner-wrapper {
+    @apply px-0 pt-6 bg-none flex flex-col items-center justify-center;
+  }
+
+  .banner-content {
+    @apply w-full flex flex-col items-center justify-start pb-10;
+  }
+
+  .banner-content-main-text {
+    @apply w-max;
+  }
+
+  .banner-content-title {
+    transform-origin: left;
+    animation: banner-content-span 1200ms ease-in-out normal;
+    @apply text-5xl text-center mb-8 bg-white text-black p-2;
+  }
+
+  .banner-content-author {
+    @apply text-3xl text-center font-poiret;
+  }
+
+  .banner-content-span {
+    @apply hidden;
+  }
+
+  .banner-content-slogan {
+    white-space: wrap;
+    animation: banner-content-author 1000ms 4s ease-in-out normal,
+      banner-element-opacity 4s;
+    @apply w-full text-center text-2xl text-white border-none font-poiret;
+  }
+
+  .banner-image {
+    @apply hidden;
+  }
+
+  .about-inbox {
+    @apply flex-col items-start justify-start;
+  }
+
+  .about-item {
+    @apply w-full mb-10 gap-4;
+  }
+
+  .about-item-title {
+    @apply mb-4 text-3xl;
+  }
+
+  .about-item-description {
+    @apply text-base font-extralight;
+  }
+
+  .other-services-box {
+    @apply gap-4;
+  }
+
+  .other-services-item-title {
+    @apply text-base text-center;
+  }
+
+  .other-services-item-price {
+    @apply text-sm text-center w-full;
+  }
+
+  .projects-box {
+    @apply hidden;
+  }
+
+  #contacts .section-title {
+    @apply text-3xl;
+  }
+
+  .projects-background-svg {
+    @apply hidden;
+  }
+
+  .contacts-left-text {
+    @apply text-3xl;
+  }
+
+  .service-page-addition-left-text {
+    @apply text-3xl;
+  }
+
+  .footer-wrapper {
+    @apply px-0 pt-5 pb-20;
+  }
+
+  .footer-box {
+    @apply text-base flex-wrap;
+  }
+
+  #footer-nav-contacts {
+    width: 34%;
+    align-items: end;
+  }
+
+  #footer-nav-docs {
+    width: 65%;
+    margin-right: 1%;
+  }
+
+  #footer-nav-main {
+    @apply w-full order-first flex-row justify-between mb-10;
+  }
+
+  .footer_btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .header {
+    @apply hidden;
+  }
+
+  .mobile-foot-bar {
+    width: calc(100% - 2rem);
+    @apply fixed bottom-4 mx-4 bg-white px-2 py-2 rounded-full flex flex-row items-center justify-between gap-1;
+  }
+
+  .mobile-foot-bar-item {
+    @apply relative py-0.5 w-full flex items-center justify-center rounded-full font-comfortaa text-black font-normal active:scale-105 transition-all duration-300;
+  }
+
+  .mobile-foot-bar-item span {
+    @apply relative -top-px;
+  }
+
+  #mobile-foot-bar-item-contacts {
+    background-color: var(--mobile-menu-contacts);
+  }
+
+  #mobile-foot-bar-item-homepage {
+    background-color: var(--mobile-menu-main);
+  }
+
+  #mobile-foot-bar-item-projects {
+    background-color: var(--mobile-menu-projects);
+  }
+
+  #mobile-foot-bar-item-services {
+    background-color: var(--mobile-menu-services);
+  }
+
+  .service-page-main {
+    @apply px-0 relative;
+  }
+
+  .service-page-image {
+    @apply h-1/2;
+  }
+
+  .service-page-text {
+    @apply px-6;
+  }
+
+  .service-page-title {
+    @apply text-2xl;
+  }
+
+  .service-page-time {
+    @apply text-lg p-1 px-3;
+  }
+
+  .service-page-description {
+    @apply text-lg;
+  }
+
+  .service-page-price {
+    @apply text-2xl;
+  }
+
+  .service-page-take-service-btn {
+    @apply text-lg px-2 py-1;
+  }
+
+  .service-page-under {
+    @apply flex-col-reverse;
+  }
+
+  .service-page-service-details {
+    @apply text-xl mt-4 absolute bottom-8;
+  }
+
+  .service-page-addition[data-state="open"] {
+    @apply mt-12 px-6;
+  }
+
+  .service-page-addition[data-state="closed"] {
+    @apply mt-0 px-6;
+  }
+
+  .service-page-addition-steps-ul {
+    @apply text-lg;
+  }
+
+  .service-page-addition-step-li p {
+    @apply leading-8;
+  }
+
+  /* ::-webkit-scrollbar {
+    display: none !important;
+    width: 0;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    width: 0;
+    display: none;
+  } */
 }
