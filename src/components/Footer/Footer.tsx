@@ -5,6 +5,7 @@ import ContactsWhatsApp from '@/SVGs/ContactsWhatsApp'
 import ContactsEmail from '@/SVGs/ContactsEmail'
 import classNames from 'classnames'
 import { comfortaa, poiret_one } from '@/app/layout'
+import { version } from '@/utils/consts'
 
 const Footer = () => {
   return (
@@ -46,7 +47,7 @@ const Footer = () => {
               8 (995) 898 98 82
             </a>
           </div>
-          <span id='version' className='font-raleway'> v0.0.1a </span>
+          <span id='version' className='font-raleway'> {version} </span>
         </div>
       </div>
     </div>

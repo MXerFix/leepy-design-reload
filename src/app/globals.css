@@ -62,7 +62,7 @@ body {
 }
 
 main {
-  @apply min-h-screen px-20;
+  @apply min-h-[100svh] px-20;
 }
 
 #modal_root[data-state="closed"] {
@@ -77,7 +77,7 @@ main {
 #modal_root {
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   top: 0;
   left: 0;
   z-index: 99;
@@ -90,7 +90,7 @@ main {
 
 .service-page-wrapper {
   pointer-events: all;
-  @apply w-screen min-h-screen bg-[var(--service-card-bg-landing)] absolute top-0 left-0 z-50 translate-x-full transition duration-500;
+  @apply w-screen min-h-[100svh] bg-[var(--service-card-bg-landing)] absolute top-0 left-0 z-50 translate-x-full transition duration-500;
 }
 
 .service-page-wrapper[data-state="open"] {
@@ -98,7 +98,7 @@ main {
 }
 
 .service-page-main {
-  @apply w-screen h-screen;
+  @apply w-screen h-[100svh];
 }
 
 .service-page-text {
