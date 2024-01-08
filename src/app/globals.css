@@ -1072,16 +1072,16 @@ main {
     @apply flex-col items-start justify-start;
   }
 
-  .about-box {
+  /* .about-box {
     background: linear-gradient(#fff, var(--menu-border));
     background-position:top left 5px;
     background-size: 1px 100%;
     background-repeat: no-repeat;
-  }
+  } */
 
-  .default-linear {
+  /* .default-linear {
     background: linear-gradient(#fff, var(--menu-border))
-  }
+  } */
 
   .about-item {
     @apply w-full mb-10 gap-4;
