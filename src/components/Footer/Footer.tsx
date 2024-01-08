@@ -46,6 +46,7 @@ const Footer = () => {
               8 (995) 898 98 82
             </a>
           </div>
+          <span id='version' className='font-raleway'> v0.0.1a </span>
         </div>
       </div>
     </div>

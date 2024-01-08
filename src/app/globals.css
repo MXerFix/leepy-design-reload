@@ -1058,7 +1058,7 @@ main {
   }
 
   .banner-content-slogan {
-    white-space: wrap;
+    white-space: normal;
     animation: banner-content-author 1000ms 4s ease-in-out normal,
       banner-element-opacity 4s;
     @apply w-full text-center text-2xl text-white border-none font-poiret;
