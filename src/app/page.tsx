@@ -12,7 +12,7 @@ import { detailedServices } from '@/utils/consts'
 export default function Home() {
 
   return (
-    <>
+    <div className='wrapper'>
       <main id='#' className="">
         <Banner />
         <WhyMe />
@@ -28,6 +28,6 @@ export default function Home() {
         {detailedServices.map((details) => <ServicePage key={details.id} details={details} />)}
       </div>
       <FootBar />
-    </>
+    </div>
   )
 }

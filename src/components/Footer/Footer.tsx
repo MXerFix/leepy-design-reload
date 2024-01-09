@@ -16,6 +16,7 @@ const Footer = () => {
           <a className='footer_btn' href="">Условия использования</a>
           <span className={classNames('font-poiret')}>©2023</span>
           <Logotype className='scale-[0.6] max-sm:w-4 max-sm:h-7 max-sm:scale-100' />
+          <span id='version' className='text-sm font-raleway text-neutral-800'> v {version} </span>
         </div>
         <div id='footer-nav-main' className='footer-column-box'>
           <a className='footer_btn' href="">услуги</a>
@@ -43,11 +44,10 @@ const Footer = () => {
             </a>
           </div>
           <div className='footer-btn-div'>
-            <a className='footer_btn text-xs' href="">
+            <a className='footer_btn font-comfortaa text-2xl max-sm:text-xs' href="">
               8 (995) 898 98 82
             </a>
           </div>
-          <span id='version' className='font-raleway'> {version} </span>
         </div>
       </div>
     </div>

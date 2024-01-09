@@ -54,15 +54,20 @@
 }
 
 body {
-  position: relative;
+  width: 100vw;
   color: rgb(var(--foreground));
   background: var(--background);
+}
+
+.wrapper {
+  position: relative;
   max-width: 1920px;
   margin: auto;
+  @apply mx-auto;
 }
 
 main {
-  @apply min-h-[100vh] px-20;
+  @apply min-h-[100vh] px-20 max-w-[1520px] mx-auto;
 }
 
 #modal_root[data-state="closed"] {
@@ -75,7 +80,7 @@ main {
 }
 
 #modal_root[data-state="open"] {
-  background-color: var(--background);
+  /* background-color: var(--background); */
 }
 
 #modal_root {
