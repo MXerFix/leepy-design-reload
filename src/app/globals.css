@@ -81,7 +81,7 @@ main {
 #modal_root {
   position: fixed;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   top: 0;
   left: 0;
   z-index: 99;
@@ -94,7 +94,7 @@ main {
 
 .service-page-wrapper {
   pointer-events: all;
-  @apply w-screen min-h-[100vh] bg-[var(--service-card-bg-landing)] absolute top-0 left-0 z-50 translate-x-full transition duration-500;
+  @apply w-screen min-h-[100dvh] bg-[var(--service-card-bg-landing)] absolute top-0 left-0 z-50 translate-x-full transition duration-500;
 }
 
 .service-page-wrapper[data-state="open"] {
@@ -102,7 +102,7 @@ main {
 }
 
 .service-page-main {
-  @apply w-screen min-h-[100vh];
+  @apply w-screen min-h-[100dvh];
 }
 
 .service-page-text {
@@ -1024,6 +1024,10 @@ main {
   @apply hidden;
 }
 
+.projects-wrapper-mobile {
+  display: none;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 719px) {
@@ -1245,6 +1249,10 @@ main {
 
   .service-page-addition-step-li p {
     @apply leading-8;
+  }
+
+  .projects-wrapper-mobile {
+    display: block;
   }
 
   /* ::-webkit-scrollbar {
