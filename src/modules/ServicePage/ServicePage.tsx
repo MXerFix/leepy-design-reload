@@ -35,6 +35,11 @@ const ServicePage = ({ details }: ServicePageType) => {
     } else if (acc && acc?.getAttribute('data-state') === 'closed') {
       acc?.setAttribute('data-state', 'open')
       acc.style.maxHeight = acc.scrollHeight + 'px'
+      setTimeout(() => {
+        let wrapper = document.getElementById(`modal_root`)
+        // acc?.scrollIntoView({behavior: 'smooth', block: 'center', inline: 'center'})
+        wrapper?.scrollBy(0, window.innerHeight)
+      }, 450);
     }
   }
 
@@ -68,10 +73,10 @@ const ServicePage = ({ details }: ServicePageType) => {
             </div>
           </div>
         </div>
-        <button className={`service-page-close-button ${(id === 'shop_details' || id === 'multipage_details') && 'close-service-light'}`} onClick={e => closeHandler()}>
-          <CloseServicePageSVG className={`${(id === 'shop_details' || id === 'multipage_details') && 'close-service-light'}`} />
-        </button>
       </div>
+      <button className={`service-page-close-button ${(id === 'shop_details' || id === 'multipage_details') && 'close-service-light'}`} onClick={e => closeHandler()}>
+        <CloseServicePageSVG className={`${(id === 'shop_details' || id === 'multipage_details') && 'close-service-light'}`} />
+      </button>
       <div id={`${id}-addition`} data-state="closed" className='service-page-addition'>
         <h5 className='service-page-title mb-16 max-sm:mb-10' > Этапы проекта </h5>
         <div className='flex flex-row items-center justify-between max-sm:flex-col'>

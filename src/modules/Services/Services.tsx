@@ -10,11 +10,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Services = () => {
-
+  
 
   useGSAP(() => {
-
-    const start = '-60% 0%'
+    const start = `-${window.innerHeight} 0%`
     const end = '+=90%'
     const scrub = 2
     const from = {
@@ -102,7 +101,7 @@ const Services = () => {
               <div
                 id={`services-item-${idx + 1}`}
                 style={{
-                  borderRadius: ` ${idx === 3 ? '0px' : '90px'} ${idx === 2 ? '0px' : '90px'} ${idx === 0 ? '0px' : '90px'} ${idx === 1 ? '0px' : '90px'} `,
+                  borderRadius: ` ${idx === 3 ? '0px' : '22%'} ${idx === 2 ? '0px' : '22%'} ${idx === 0 ? '0px' : '22%'} ${idx === 1 ? '0px' : '22%'} `,
                   flexDirection: (idx > 1 ? 'column-reverse' : 'column'),
                   background: `linear-gradient(${idx > 1 ? "180deg" : '0deg'}, ${backgroundHandle(idx)} 0%, rgba(0, 0, 0, 0.00) 91.55%)`
                 }}
@@ -110,7 +109,7 @@ const Services = () => {
                 onClick={e => detailHandle(service.id)}
                 key={service.label}
               >
-                <Image src={service.img} alt={service.label} />
+                <Image className='w-full' src={service.img} alt={service.label} />
                 <div
                   style={{
                     top: idx > 1 ? '3rem' : '',

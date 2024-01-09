@@ -54,20 +54,20 @@
 }
 
 body {
-  width: 100vw;
   color: rgb(var(--foreground));
   background: var(--background);
 }
 
 .wrapper {
-  position: relative;
   max-width: 1920px;
+  overflow-x: hidden;
+  position: relative;
   margin: auto;
   @apply mx-auto;
 }
 
 main {
-  @apply min-h-[100vh] px-20 max-w-[1520px] mx-auto;
+  @apply min-h-[100vh] px-20 mx-auto;
 }
 
 #modal_root[data-state="closed"] {
@@ -378,6 +378,7 @@ main {
 /* BANNER STYLES */
 
 .banner-wrapper {
+  max-height: min(768px, 65vh);
   color: var(--foreground);
   /* border: 1px solid var(--foreground);
   border-right: 0;
@@ -668,8 +669,8 @@ main {
 }
 
 .services-item {
-  width: 24vw;
-  height: 24vw;
+  width: min(24vw, 480px);
+  height: min(24vw, 480px);
   border: 1px solid white;
   border-radius: 90px;
   padding: 1.25rem;
@@ -871,7 +872,13 @@ main {
 }
 
 .projects-background-svg {
-  @apply absolute top-[122px] right-[128px] pointer-events-none;
+  top: 122px;
+  right: 40px;
+  left: 0;
+  bottom: 0;
+  margin-right: auto;
+  margin-left: auto;
+  @apply absolute pointer-events-none;
 }
 
 .go_project_btn_circle {
@@ -1046,6 +1053,7 @@ main {
   }
 
   .banner-wrapper {
+    max-height: max-content;
     @apply px-0 pt-6 bg-none flex flex-col items-center justify-center;
   }
 

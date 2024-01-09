@@ -49,8 +49,8 @@ const Projects = () => {
           Обсудить проект
         </GoProjectCircleBtn>
         <Image className='projects-background-svg' src={foreground} alt='' />
-        <span className='projects-circle-foreground'>
-        </span>
+        {/* <span className='projects-circle-foreground'>
+        </span> */}
       </div>
       <div id='m-projects' className="projects-wrapper-mobile">
         <div className="projects-box-mobile flex flex-col items-center justify-start gap-6">
