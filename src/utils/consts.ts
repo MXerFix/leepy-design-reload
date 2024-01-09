@@ -21,7 +21,7 @@ import detailed_shop from '../../public/service_details_shop.webp'
 import detailed_multipage from '../../public/service_details_multipage.webp'
 import detailed_business from '../../public/service_details_business.webp'
 
-export const version = '0.0.5a'
+export const version = '0.0.51f'
 
 export const navListData: navListItem[] = [
   {
