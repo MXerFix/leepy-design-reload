@@ -901,6 +901,7 @@ main {
 }
 
 .go-project-btn-BLACK {
+  display: none;
   animation: toggling_light 7.5s 3.5s linear normal, banner-element-opacity 3.5s;
 }
 
@@ -1252,6 +1253,10 @@ main {
   }
 
   .projects-wrapper-mobile {
+    display: block;
+  }
+
+  .go-project-btn-BLACK {
     display: block;
   }
 
