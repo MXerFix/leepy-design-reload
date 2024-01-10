@@ -20,6 +20,7 @@ import detailed_landing from '../../public/service_details_landing.webp'
 import detailed_shop from '../../public/service_details_shop.webp'
 import detailed_multipage from '../../public/service_details_multipage.webp'
 import detailed_business from '../../public/service_details_business.webp'
+import mobile_bakery from '../../public/projects_bakery_mobile.png'
 
 export const version = '0.0.51f'
 
@@ -68,20 +69,6 @@ export const whyMeData: whyMeDataType[] = [
 
 export const servicesData: servicesDataType[] = [
   {
-    id: 'shop_details',
-    href: '/services/shop',
-    label: 'Интернет-магазин',
-    img: service_shop,
-    color: 'var(--service-card-bg-store)'
-  },
-  {
-    id: 'business_details',
-    href: '/services/business',
-    label: 'Сайт-визитка',
-    img: service_business,
-    color: 'var(--service-card-bg-business)'
-  },
-  {
     id: 'landing_details',
     href: '/services/landing',
     label: 'Landing-page',
@@ -94,6 +81,20 @@ export const servicesData: servicesDataType[] = [
     label: 'Многостраничный сайт',
     img: service_multipage,
     color: 'var(--service-card-bg-multipage)'
+  },
+  {
+    id: 'shop_details',
+    href: '/services/shop',
+    label: 'Интернет-магазин',
+    img: service_shop,
+    color: 'var(--service-card-bg-store)'
+  },
+  {
+    id: 'business_details',
+    href: '/services/business',
+    label: 'Сайт-визитка',
+    img: service_business,
+    color: 'var(--service-card-bg-business)'
   },
 ]
 
@@ -161,7 +162,8 @@ export const projectsItems: projectsItemType[] = [
     type: 'Лендинг',
     href: '',
     status: 'wip',
-    img: bakery
+    img: bakery,
+    mobileImg: mobile_bakery
   },
 ]
 

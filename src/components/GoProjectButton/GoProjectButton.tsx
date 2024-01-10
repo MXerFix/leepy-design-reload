@@ -5,7 +5,7 @@ import React from 'react'
 
 export const GoProjectButton = ({ children, className }: {children: string, className: string}) => {
   return (
-    <button className={ classNames(className, ' relative overflow-hidden w-max h-max ', comfortaa.className) }>
+    <a href='#contacts' className={ classNames(className, ' relative overflow-hidden w-max h-max ', comfortaa.className) }>
       <div className='go-project-btn overflow-hidden w-max h-max '>
         {children}
         <span className='go-project-btn-border1'></span>
@@ -14,6 +14,6 @@ export const GoProjectButton = ({ children, className }: {children: string, clas
         <span className='go-project-btn-border4'></span>
         <span className='go-project-btn-arrow'> <Arrow className='' /> </span>
       </div>
-    </button>
+    </a>
   )
 }

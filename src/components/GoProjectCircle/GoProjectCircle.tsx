@@ -9,9 +9,9 @@ interface goProjBtnI {
 
 export const GoProjectCircleBtn = ({children, className}: goProjBtnI) => {
   return (
-    <button className={classNames(' relative flex flex-col items-start go_project_btn_circle ', className)} >
+    <a href='#contacts' className={classNames(' relative flex flex-col items-start go_project_btn_circle ', className)} >
       {children}
       <Arrow_2 className=' go_project_arrow_ ' />
-    </button>
+    </a>
   )
 }

@@ -107,7 +107,7 @@ main {
 }
 
 .service-page-main {
-  @apply w-screen min-h-[100svh];
+  @apply w-screen min-h-[100svh] h-[100svh] max-sm:pb-[6vh];
 }
 
 .service-page-text {
@@ -144,7 +144,11 @@ main {
 }
 
 .service-page-take-service-btn {
-  @apply text-3xl border border-white rounded-full px-6 py-3;
+  @apply text-3xl border border-white rounded-full px-6 py-3 transition duration-500;
+}
+
+.service-page-take-service-btn:hover {
+  @apply bg-white text-black
 }
 
 .close-service-light {
@@ -759,6 +763,8 @@ main {
 /* FOOTER STYLES */
 
 .footer-wrapper {
+  font-family: var(--font-comfortaa);
+  font-weight: 300;
   @apply text-[var(--foreground)] text-2xl border-t pt-8 pr-16 pb-8;
 }
 
@@ -860,7 +866,7 @@ main {
 }
 
 .projects-item-span {
-  @apply font-semibold underline;
+  @apply font-semibold;
 }
 
 .projects-item-right {
@@ -1110,7 +1116,7 @@ main {
   }
 
   .about-item-title {
-    @apply mb-4 text-3xl;
+    @apply mb-4 text-[1.75rem] leading-8;
   }
 
   .about-item-description {
@@ -1126,7 +1132,7 @@ main {
   }
 
   .other-services-item-price {
-    @apply text-sm text-center w-full;
+    @apply text-sm w-full;
   }
 
   .projects-box {
@@ -1169,6 +1175,9 @@ main {
 
   #footer-nav-main {
     @apply w-full order-first flex-row justify-between mb-10;
+  }
+
+  .footer-btn {
   }
 
   .footer_btn svg {

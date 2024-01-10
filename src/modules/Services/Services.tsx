@@ -88,7 +88,7 @@ const Services = () => {
   return (
     <>
       <h2 className='section-title'>
-        Какие дизайн-проекты создаю?
+        Популярные услуги
       </h2>
       <div id='services' className='services-wrapper max-sm:hidden'>
         <div className='services-outbox relative'>

@@ -12,23 +12,23 @@ const Contacts = () => {
       <p className=' text-3xl max-w-xl mb-24 max-sm:text-xl '>
         Если у Вас остались вопросы, Вы можете написать мне или оставить свои контакты!
       </p>
-      <div className='flex flex-row items-center justify-between max-sm:flex-col max-sm:gap-16 '>
-        <div className='flex flex-col items-start justify-start text-3xl gap-6 max-sm:text-xl '>
+      <div className='flex flex-row items-center justify-between max-sm:flex-col max-sm:items-start max-sm:gap-16 '>
+        <div className='flex flex-col items-start justify-start text-3xl gap-6 max-sm:text-xl  '>
           <a className='contacts-a' href="">
             Telegram
-            <ArrowContacts />
+            <ArrowContacts className='max-sm:w-12' />
           </a>
           <a className='contacts-a' href="">
             WhatsApp
-            <ArrowContacts />
+            <ArrowContacts className='max-sm:w-12' />
           </a>
           <a className='contacts-a' href="">
             Email
-            <ArrowContacts />
+            <ArrowContacts className='max-sm:w-12' />
           </a>
         </div>
         <p className={classNames(caveat.className, ' contacts-left-text ')}>
-          <a className='' href="">Скачайте бриф</a>, заполните и отправьте его мне!
+          <a className='' target='_blank' href="https://docs.google.com/document/d/1jvzATfFv3PJYaMAH_-R316ep9L8iJRdOGeiwYlbsOxA/">Скачайте бриф</a>, заполните и отправьте его мне!
         </p>
       </div>
     </div>

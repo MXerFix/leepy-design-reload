@@ -52,9 +52,9 @@ const ServicePage = ({ details }: ServicePageType) => {
         backgroundColor: color
       }}
     >
-      <div className='service-page-main'>
-        <Image className='service-page-image' quality={100} src={img} alt={name} />
-        <div className='service-page-text'>
+      <div className='service-page-main h-max'>
+        <Image className='service-page-image max-sm:min-h-[40%]' quality={100} src={img} alt={name} />
+        <div className='service-page-text max-sm:min-h-[40%]'>
           <div className=''>
             <h3 className={`service-page-title mb-4`} > {name} </h3>
             <p className='service-page-time'> {time} </p>
@@ -69,7 +69,7 @@ const ServicePage = ({ details }: ServicePageType) => {
             </button>
             <div className=' flex flex-row items-center justify-end gap-12 max-sm:gap-0 max-sm:justify-between max-sm:w-full '>
               <p className='service-page-price'> {price} </p>
-              <button className='service-page-take-service-btn'> Заказать проект </button>
+              <a href='https://t.me/leepydesign' target='_blank' className='service-page-take-service-btn'> Заказать проект </a>
             </div>
           </div>
         </div>
@@ -92,7 +92,7 @@ const ServicePage = ({ details }: ServicePageType) => {
             )}
           </ul>
           <p className={classNames(' service-page-addition-left-text font-caveat ')}>
-            <a className='' href="">Скачайте бриф</a>, заполните и отправьте его мне!
+            <a className='' target='_blank' href="https://docs.google.com/document/d/1jvzATfFv3PJYaMAH_-R316ep9L8iJRdOGeiwYlbsOxA/">Скачайте бриф</a>, заполните и отправьте его мне!
           </p>
         </div>
         <p className='mb-24 text-2xl max-sm:text-lg max-sm:my-10'> * После каждого выполненного пункта клиент получает отчет. </p>

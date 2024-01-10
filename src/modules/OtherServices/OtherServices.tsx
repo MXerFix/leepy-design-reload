@@ -21,6 +21,7 @@ const OtherServices = () => {
             </div>
           ))}
         </div>
+        <span className='text-white mt-12 max-w-[80vw] mx-auto'>* Точная стоимость будет известна после согласования всех деталей работы.</span>
       </div>
     </>
   )

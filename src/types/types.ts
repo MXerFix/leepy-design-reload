@@ -39,6 +39,7 @@ export type projectsItemType = {
   href: string
   status: projectStatusType
   img: StaticImageData
+  mobileImg?: StaticImageData
 }
 
 export type projectStatusValidType = 'Свободный проект' | 'Проект продан' | 'Проект забронирован' | 'Проект в разработке'
