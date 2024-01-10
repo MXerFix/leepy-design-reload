@@ -103,7 +103,7 @@ const Services = () => {
                 style={{
                   borderRadius: ` ${idx === 3 ? '0px' : '22%'} ${idx === 2 ? '0px' : '22%'} ${idx === 0 ? '0px' : '22%'} ${idx === 1 ? '0px' : '22%'} `,
                   flexDirection: (idx > 1 ? 'column-reverse' : 'column'),
-                  background: `linear-gradient(${idx > 1 ? "180deg" : '0deg'}, ${backgroundHandle(idx)} 0%, rgba(0, 0, 0, 0.00) 91.55%)`
+                  background: `linear-gradient(${idx > 1 ? "180deg" : '0deg'}, ${service.color} 0%, rgba(0, 0, 0, 0.00) 91.55%)`
                 }}
                 className='services-item'
                 onClick={e => detailHandle(service.id)}

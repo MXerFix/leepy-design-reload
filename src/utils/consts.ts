@@ -22,7 +22,7 @@ import detailed_multipage from '../../public/service_details_multipage.webp'
 import detailed_business from '../../public/service_details_business.webp'
 import mobile_bakery from '../../public/projects_bakery_mobile.png'
 
-export const version = '0.0.51f'
+export const version = '0.0.521f'
 
 export const navListData: navListItem[] = [
   {
@@ -69,20 +69,6 @@ export const whyMeData: whyMeDataType[] = [
 
 export const servicesData: servicesDataType[] = [
   {
-    id: 'landing_details',
-    href: '/services/landing',
-    label: 'Landing-page',
-    img: service_landing,
-    color: 'var(--service-card-bg-landing)'
-  },
-  {
-    id: 'multipage_details',
-    href: '/services/multipage',
-    label: 'Многостраничный сайт',
-    img: service_multipage,
-    color: 'var(--service-card-bg-multipage)'
-  },
-  {
     id: 'shop_details',
     href: '/services/shop',
     label: 'Интернет-магазин',
@@ -95,6 +81,20 @@ export const servicesData: servicesDataType[] = [
     label: 'Сайт-визитка',
     img: service_business,
     color: 'var(--service-card-bg-business)'
+  },
+  {
+    id: 'landing_details',
+    href: '/services/landing',
+    label: 'Landing-page',
+    img: service_landing,
+    color: 'var(--service-card-bg-landing)'
+  },
+  {
+    id: 'multipage_details',
+    href: '/services/multipage',
+    label: 'Многостраничный сайт',
+    img: service_multipage,
+    color: 'var(--service-card-bg-multipage)'
   },
 ]
 
