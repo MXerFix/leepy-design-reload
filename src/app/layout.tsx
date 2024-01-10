@@ -27,7 +27,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={classNames(poiret_one.className, prosto_one.variable, raleway.variable, caveat.variable)}>
+      <body className={classNames(poiret_one.className, prosto_one.variable, raleway.variable, caveat.variable, comfortaa.variable)}>
         <header>
           <Header navList={navListData} />
         </header>

@@ -1128,7 +1128,7 @@ main {
   }
 
   .other-services-item-title {
-    @apply text-base text-center;
+    @apply text-base;
   }
 
   .other-services-item-price {
@@ -1177,7 +1177,8 @@ main {
     @apply w-full order-first flex-row justify-between mb-10;
   }
 
-  .footer-btn {
+  .footer-box {
+    @apply text-xs
   }
 
   .footer_btn svg {
